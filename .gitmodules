@@ -1,0 +1,6 @@
+[submodule "solvers/kissat"]
+	path = solvers/kissat
+	url = https://github.com/arminbiere/kissat
+[submodule "solvers/ParaFROST"]
+	path = solvers/ParaFROST
+	url = https://github.com/muhos/ParaFROST
