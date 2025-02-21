@@ -33,3 +33,14 @@ jobs:
       shell: bash
       run: |
         ./run.sh
+    
+    - name: Pack
+      working-directory: ${{github.workspace}}/results
+      run: |
+        tar -czf CI_${{matrix.os}}_${{matrix.compiler}}.tar.gz CI
+
+    - name: save results
+      uses: actions/upload-artifact@v4
+      with:
+        name: CI_${{matrix.os}}_${{matrix.compiler}}
+        path: ${{github.workspace}}/results/CI_${{matrix.os}}_${{matrix.compiler}}.tar.gz
