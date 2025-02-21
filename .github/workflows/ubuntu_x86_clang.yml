@@ -26,8 +26,8 @@ jobs:
 
     - name: build sat solvers
       working-directory: ${{github.workspace}}
-      run: build.sh
+      run: /bin/bash build.sh
 
     - name: run sat solvers
       working-directory: ${{github.workspace}}
-      run: run.sh
+      run: /bin/bash run.sh
