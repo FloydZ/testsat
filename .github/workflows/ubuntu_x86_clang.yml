@@ -1,0 +1,31 @@
+name: ubuntu_x86_clang
+
+on: [push]
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        # ubuntu 20 doesnt support c++20
+        os: [ubuntu-22.04]
+        version: [ 15 ]
+        build_type: [Release]
+
+    name: Build & test on ${{ matrix.os }} with clang-${{ matrix.version }} in ${{ matrix.build_type }} mode.
+    runs-on: ${{ matrix.os }}
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        submodules: recursive
+
+    - name: Install Software
+      run: |
+        sudo apt-get install -y libtbb-dev clang-${{matrix.version}}
+        sudo apt-get install -y libomp-${{matrix.version}}-dev libomp5-${{matrix.version}}
+
+    - name: build sat solvers
+      run: ./build.sh
+
+    - name: run sat solvers
+      run: ./run.sh
