@@ -2,8 +2,8 @@
 builder=("build_kissat" "build_parafrost_cpu")
 runner=("run_kissat" "run_parafrost_cpu")
 
-cd solver
+cd solvers
 for b in "${builder[@]}"
 do 
-    ./${b}
+    ./${b}.sh
 done
