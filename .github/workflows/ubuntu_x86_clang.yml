@@ -27,9 +27,9 @@ jobs:
     - name: build sat solvers
       shell: bash
       run: |
-        build.sh
+        ./build.sh
 
     - name: run sat solvers
       shell: bash
       run: |
-        run.sh
+        ./run.sh
