@@ -41,7 +41,7 @@ do
 
     rm instances/*.cnf
     counter=$((counter+1))
-    if [[ "$counter" -gt 20 ]]; then
+    if [[ "$counter" -gt 11 ]]; then
        echo "Counter: $counter times reached; Exiting loop!"
        exit 0
     fi
