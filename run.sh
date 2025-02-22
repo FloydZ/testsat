@@ -4,7 +4,7 @@ builder=("build_kissat" "build_parafrost_cpu")
 runner=("run_kissat" "run_parafrost_cpu")
 
 threads=4
-out_folder="results/7600X"
+out_folder="results/CI"
 results_file="${out_folder}/results"
 touch ${results_file}
 
