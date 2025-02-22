@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
+# TODO move these outside: add cryptominisat and more
 builder=("build_kissat" "build_parafrost_cpu")
-runner=("run_kissat") # "run_parafrost_cpu")
+runner=("run_kissat" "run_parafrost_cpu")
 
 threads=4
 out_folder="results/CI"
@@ -55,6 +56,7 @@ do
     counter=$((counter+1))
     if [[ "$counter" -gt 44 ]]; then
        echo "Counter: $counter times reached; Exiting loop!"
+       wait
        exit 0
     fi
 done 
