@@ -3,9 +3,9 @@
 builder=("build_kissat" "build_parafrost_cpu")
 runner=("run_kissat" "run_parafrost_cpu")
 
-threads=2
-limit=10
-out_folder="results/CI"
+threads=6
+limit=12
+out_folder="results/7600X"
 results_file="${out_folder}/results"
 touch ${results_file}
 
@@ -36,7 +36,7 @@ do
     do
       sleep 5
     done
-
+   
     # -k: keep, -d: decompress
     xz -kd ${file}
     # remove the file ending
@@ -49,11 +49,11 @@ do
         out_file="${out_folder}/${filename}.${r}"
         if [ ! -f ${out_file} ]; then
             task ${out_file} &
+            counter=$((counter+1))
         fi
-        counter=$((counter+1))
     done
 
-    sleep 4
+    sleep 5
     rm instances/*.cnf
     if [[ "${counter}" -gt ${limit} ]]; then
        echo "Counter: ${limit} times reached; Exiting loop!"
