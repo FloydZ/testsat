@@ -4,16 +4,7 @@ on: [push]
 
 jobs:
   build:
-    strategy:
-      matrix:
-        # ubuntu 20 doesnt support c++20
-        os: [ubuntu-22.04]
-        version: [ 15 ]
-        build_type: [Release]
-
-    name: Build & test on ${{ matrix.os }} with clang-${{ matrix.version }} in ${{ matrix.build_type }} mode.
-    runs-on: ${{ matrix.os }}
-
+    runs-on: self-hosted
     steps:
     - uses: actions/checkout@v4
       with:
@@ -37,10 +28,10 @@ jobs:
     - name: Pack
       working-directory: ${{github.workspace}}/results
       run: |
-        tar -czf CI_${{matrix.os}}_${{matrix.compiler}}.tar.gz CI
+        tar -czf sCI_${{matrix.os}}_${{matrix.compiler}}.tar.gz CI
 
     - name: save results
       uses: actions/upload-artifact@v4
       with:
-        name: CI_${{matrix.os}}_${{matrix.compiler}}
-        path: ${{github.workspace}}/results/CI_${{matrix.os}}_${{matrix.compiler}}.tar.gz
+        name: sCI_${{matrix.os}}_${{matrix.compiler}}
+        path: ${{github.workspace}}/results/sCI_${{matrix.os}}_${{matrix.compiler}}.tar.gz
