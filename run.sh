@@ -4,6 +4,7 @@ builder=("build_kissat" "build_parafrost_cpu")
 runner=("run_kissat" "run_parafrost_cpu")
 
 threads=4
+limit=10
 out_folder="results/CI"
 results_file="${out_folder}/results"
 touch ${results_file}
@@ -49,13 +50,13 @@ do
         if [ ! -f ${out_file} ]; then
             task ${out_file} &
         fi
+        counter=$((counter+1))
     done
 
     sleep 4
     rm instances/*.cnf
-    counter=$((counter+1))
-    if [[ "$counter" -gt 5 ]]; then
-       echo "Counter: $counter times reached; Exiting loop!"
+    if [[ "${counter}" -gt ${limit} ]]; then
+       echo "Counter: ${limit} times reached; Exiting loop!"
        wait
        exit 0
     fi
