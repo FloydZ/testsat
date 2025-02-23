@@ -1,5 +1,7 @@
 name: ubuntu_x86_clang
 
+runs-on: self-hosted 
+
 on: [push]
 
 jobs:

@@ -3,7 +3,7 @@
 builder=("build_kissat" "build_parafrost_cpu")
 runner=("run_kissat" "run_parafrost_cpu")
 
-threads=4
+threads=2
 limit=10
 out_folder="results/CI"
 results_file="${out_folder}/results"
