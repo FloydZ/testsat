@@ -54,7 +54,7 @@ do
     sleep 4
     rm instances/*.cnf
     counter=$((counter+1))
-    if [[ "$counter" -gt 10 ]]; then
+    if [[ "$counter" -gt 5 ]]; then
        echo "Counter: $counter times reached; Exiting loop!"
        wait
        exit 0
