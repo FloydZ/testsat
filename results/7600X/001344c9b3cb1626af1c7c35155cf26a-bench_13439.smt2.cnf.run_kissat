@@ -1,0 +1,70 @@
+c ---- [ banner ] ------------------------------------------------------------
+c
+c Kissat SAT Solver
+c 
+c Copyright (c) 2021-2024 Armin Biere University of Freiburg
+c Copyright (c) 2019-2021 Armin Biere Johannes Kepler University Linz
+c 
+c Version 4.0.2 unknown
+c gcc (GCC) 13.3.0 -W -Wall -O3 -march=native -funroll-loops -DNDEBUG
+c Sat Feb 22 02:20:01 PM CET 2025 Linux main0 6.6.72 x86_64
+c
+c ---- [ parsing ] -----------------------------------------------------------
+c
+c opened and reading DIMACS file:
+c
+c   instances/001344c9b3cb1626af1c7c35155cf26a-bench_13439.smt2.cnf
+c
+c parsed 'p cnf 1313245 4751686' header
+c closing input after reading 108797713 bytes (104 MB)
+c finished parsing after 0.64 seconds
+c
+c ---- [ solving ] -----------------------------------------------------------
+c
+c seconds  switched rate     size/glue tier1    binary              remaining
+c         MB reductions conflicts size  tier2        irredundant
+c          level restarts redundant glue  trail               variables
+c
+c *  0.64 272 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 1200388 3535789 1308998 100%
+c (  0.65 275 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 1200388 3535789 1308998 100%
+c .  0.84 296 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 1200194 3535779 1308998 100%
+c c  3.14 540 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 1255950 3535779 1282845 98%
+c )  3.14 540 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 1255950 3535779 1282845 98%
+c 0  3.14 540 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 1255950 3535779 1282845 98%
+c
+c ---- [ result ] ------------------------------------------------------------
+c
+s UNSATISFIABLE
+c
+c ---- [ profiling ] ---------------------------------------------------------
+c
+c           2.49   79.29 %  preprocess
+c           2.30   73.15 %  probe
+c           2.30   73.14 %  congruence
+c           0.64   20.32 %  parse
+c           0.01    0.38 %  lucky
+c           0.00    0.00 %  search
+c           0.00    0.00 %  simplify
+c =============================================
+c           3.14  100.00 %  total
+c
+c ---- [ statistics ] --------------------------------------------------------
+c
+c conflicts:                                0                0.00 per second
+c congruent:                            24851                2 %  variables
+c decisions:                                0                0.00 per conflict
+c propagations:                         86136            27438    per second
+c switched:                                 0                0    interval
+c
+c ---- [ glue usage ] --------------------------------------------------------
+c
+c no clauses used at all
+c
+c ---- [ resources ] ---------------------------------------------------------
+c
+c maximum-resident-set-size:        705003520 bytes        672 MB
+c process-time:                             3s               3.14 seconds
+c
+c ---- [ shutting down ] -----------------------------------------------------
+c
+c exit 20
