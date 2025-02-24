@@ -5,7 +5,7 @@ runner=("run_kissat" "run_parafrost_cpu")
 
 threads=6
 limit=12
-out_folder="results/7600X"
+out_folder="results/CI"
 results_file="${out_folder}/results"
 touch ${results_file}
 
@@ -36,7 +36,8 @@ do
     do
       sleep 5
     done
-   
+  
+    d=0
     # -k: keep, -d: decompress
     xz -kd ${file}
     # remove the file ending
@@ -48,13 +49,20 @@ do
     do 
         out_file="${out_folder}/${filename}.${r}"
         if [ ! -f ${out_file} ]; then
+            d=1
             task ${out_file} &
             counter=$((counter+1))
+        else 
+            echo "skipping ${file2}"
         fi
     done
 
-    sleep 5
-    rm instances/*.cnf
+    # only delete the test file if it really runs
+    if [[ "${d}" -gt 0 ]]; then
+        sleep 10
+        rm ${file2} 
+    fi
+
     if [[ "${counter}" -gt ${limit} ]]; then
        echo "Counter: ${limit} times reached; Exiting loop!"
        wait
