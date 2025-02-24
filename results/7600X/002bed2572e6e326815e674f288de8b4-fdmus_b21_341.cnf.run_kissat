@@ -1,0 +1,76 @@
+c ---- [ banner ] ------------------------------------------------------------
+c
+c Kissat SAT Solver
+c 
+c Copyright (c) 2021-2024 Armin Biere University of Freiburg
+c Copyright (c) 2019-2021 Armin Biere Johannes Kepler University Linz
+c 
+c Version 4.0.2 unknown
+c gcc (GCC) 13.3.0 -W -Wall -O3 -march=native -funroll-loops -DNDEBUG
+c Sun Feb 23 08:50:22 PM CET 2025 Linux main0 6.6.79 x86_64
+c
+c ---- [ parsing ] -----------------------------------------------------------
+c
+c opened and reading DIMACS file:
+c
+c   instances/002bed2572e6e326815e674f288de8b4-fdmus_b21_341.cnf
+c
+c parsed 'p cnf 2823 7704' header
+c closing input after reading 106633 bytes (104 KB)
+c finished parsing after 0.00 seconds
+c
+c ---- [ solving ] -----------------------------------------------------------
+c
+c seconds switched rate     size/glue tier1  binary       remaining
+c        MB reductions conflicts size  tier2   irredundant
+c         level restarts redundant glue  trail       variables
+c
+c *  0.00  3 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 5334 2364 2810 100%
+c (  0.00  3 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 5334 2364 2810 100%
+c .  0.00  3 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 5319 2357 2810 100%
+c c  0.00  4 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 8343 845 998 35%
+c d  0.00  4 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 4718 841 995 35%
+c d  0.01  4 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 4716 839 993 35%
+c b  0.01  4 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 4716 839 902 32%
+c )  0.01  4 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 4716 839 902 32%
+c 0  0.01  4 0 0 0  0 0   0   0 0.0 0 0 0 0 0% 4716 839 902 32%
+c
+c ---- [ result ] ------------------------------------------------------------
+c
+s UNSATISFIABLE
+c
+c ---- [ profiling ] ---------------------------------------------------------
+c
+c           0.00   65.04 %  preprocess
+c           0.00   59.77 %  probe
+c           0.00   47.87 %  congruence
+c           0.00   24.81 %  parse
+c           0.00   10.27 %  substitute
+c           0.00    7.07 %  lucky
+c           0.00    1.46 %  backbone
+c           0.00    0.00 %  search
+c           0.00    0.00 %  simplify
+c =============================================
+c           0.01  100.00 %  total
+c
+c ---- [ statistics ] --------------------------------------------------------
+c
+c conflicts:                                0                0.00 per second
+c congruent:                             1812               64 %  variables
+c decisions:                                0                0.00 per conflict
+c propagations:                         11700          2097150    per second
+c substituted:                           1812               64 %  variables
+c switched:                                 0                0    interval
+c
+c ---- [ glue usage ] --------------------------------------------------------
+c
+c no clauses used at all
+c
+c ---- [ resources ] ---------------------------------------------------------
+c
+c maximum-resident-set-size:          3911680 bytes          4 MB
+c process-time:                                              0.01 seconds
+c
+c ---- [ shutting down ] -----------------------------------------------------
+c
+c exit 20
