@@ -1,0 +1,131 @@
+c--------------------------------------------------------------------------------------------
+c    [4m[38;5;117mParaFROST (Parallel Formal ReasOning about Satisfiability) [38;5;117mSAT Solver (version 3.2.5)[0m    
+c  Authors: [38;5;116mMuhammad Osama Mahmoud, all rights reserved[0m                                       
+c--------------------------------------------------------------------------------------------
+c  Available CPU: [38;5;106mAMD Ryzen 5 7600X 6-Core Processor             [0m
+c  Available system memory: 14 GB
+c  Built on [38;5;106mlinux main0 6.6.79 x86_64[0m at [38;5;106mMo 24. Feb 08:53:05 CET 2025[0m
+c        using [38;5;106mg++ (GCC) 13.3.0 (release mode)[0m
+c  Forced FPU to use [38;5;106mdouble precision[0m
+c--------------------------------------------------------------------------------------------
+c  Parsing CNF file "[38;5;106minstances/0043cfdde474fa37dfeb5ce5952d22f6-unif-c2520-v600-s1111033636.cnf[0m" (size: [38;5;106m0 MB[0m)
+c  Found header [38;5;106m600 2520[0m
+c  Read [38;5;106m600 Variables[0m, [38;5;106m2520 Clauses[0m, and [38;5;106m7560 Literals[0m in [38;5;106m0.00 seconds[0m
+c   found [38;5;106m0 units[0m, [38;5;106m0 binaries[0m, [38;5;106m2520 ternaries[0m, [38;5;106m0 larger[0m
+c   maximum clause size: [38;5;106m3[0m
+c-----------------------------------------[38;5;109m Progress [0m-----------------------------------------
+c[38;5;109m              ORG                Conflicts   Restarts            Learnt           V(%)  C(%)[0m
+c[38;5;109m      V         C         L                                C          L     L/C[0m             
+c--------------------------------------------------------------------------------------------
+c [38;5;78m-       600      2520       7560          0        0         0          0      0  100% 100%[0m 
+c [32ms       580      2496       7610          0        0         0          0      0   96%  99%[0m 
+c [36mw       580      2496       7610          0        0         0          0      0   96%  99%[0m 
+c [38;5;221mm       580      2496       7610          0        0         0          0      0   96%  99%[0m 
+c [38;5;168m-       580      2496       7610        902        3       276       3314     12   96%  99%[0m 
+c [38;5;170mh       580      2496       7610        902        3       330       3476     10   96%  99%[0m 
+c [38;5;125mv       580      2496       7610        902        3       244       2792     11   96%  99%[0m 
+c [0m        580      2496       7610       1002        6       344       5558     16   96%  99%[0m 
+c [38;5;168m-       580      2496       7610       2703       23      1305      27765     21   96%  99%[0m 
+c [38;5;170mh       580      2496       7610       2703       23      1310      27780     21   96%  99%[0m 
+c [38;5;125mv       580      2496       7610       2703       23      1141      26385     23   96%  99%[0m 
+c [0m        580      2496       7610       3846       28      1313      26707     20   96%  99%[0m 
+c [38;5;168m-       580      2496       7610       5404       29      1565      33576     21   96%  99%[0m 
+c [38;5;170mh       580      2496       7610       5404       29      1588      33645     21   96%  99%[0m 
+c [38;5;125mv       580      2496       7610       5404       29      1331      31406     23   96%  99%[0m 
+c [36mw       580      2496       7610       6004       53      1916      47678     24   96%  99%[0m 
+c [36mk         0         0          0       6004       53         0          0      0    0%   0%[0m 
+c--------------------------------------------------------------------------------------------
+c 
+c 
+s SATISFIABLE
+c 
+c 			[38;5;187mSimplifier Report[0m
+c  [38;5;187mSimplifier time        : [38;5;106m0.001             sec[0m
+c  [38;5;187mSigmifications         : [38;5;106m1         [0m
+c  [38;5;187m Removed variables     : [38;5;106m20              [0m
+c  [38;5;187m  Forced units         : [38;5;106m0         [0m
+c  [38;5;187m Removed clauses       : [38;5;106m24              [0m
+c  [38;5;187m Removed literals      : [38;5;106m-50             [0m
+c 			[38;5;187mSolver Report[0m
+c  [38;5;187mSolver time            : [38;5;106m0.135             sec[0m
+c  [38;5;187mSystem memory          : [38;5;106m6.137             MB[0m
+c  [38;5;187mFormula                : [38;5;106minstances/0043cfdde474fa37dfeb5ce5952d22f6-unif-c2520-v600-s1111033636.cnf[0m
+c  [38;5;187m Size                  : [38;5;106m0.036             MB[0m
+c  [38;5;187m Units                 : [38;5;106m0         [0m
+c  [38;5;187m Binaries              : [38;5;106m0         [0m
+c  [38;5;187m Ternaries             : [38;5;106m2520      [0m
+c  [38;5;187m Larger                : [38;5;106m0         [0m
+c  [38;5;187m Max clause size       : [38;5;106m3         [0m
+c  [38;5;187m C2V ratio             : [38;5;106m4.200     [0m
+c  [38;5;187mAutarky calls          : [38;5;106m1               [0m
+c  [38;5;187m Removed variables     : [38;5;106m580             [0m
+c  [38;5;187mBacktracks             : [38;5;106m6000            [0m
+c  [38;5;187m Chronological         : [38;5;106m1               [0m
+c  [38;5;187m Non-Chronological     : [38;5;106m5999            [0m
+c  [38;5;187m Trail reuses          : [38;5;106m29              [0m
+c  [38;5;187mConflicts              : [38;5;106m6004            [0m
+c  [38;5;187m OTF strengthened      : [38;5;106m2               [0m
+c  [38;5;187m OTF subsumed          : [38;5;106m0               [0m
+c  [38;5;187m Learnt OTF subsumes   : [38;5;106m131768          [0m
+c  [38;5;187m Learnt OTF subsumed   : [38;5;106m136             [0m
+c  [38;5;187m Learnt units          : [38;5;106m0         [0m
+c  [38;5;187m Learnt literals       : [38;5;106m0               [0m
+c  [38;5;187mDeduplications         : [38;5;106m3               [0m
+c  [38;5;187m Hyper unaries         : [38;5;106m0               [0m
+c  [38;5;187m Duplicated binaries   : [38;5;106m0               [0m
+c  [38;5;187mDecompositions         : [38;5;106m6               [0m
+c  [38;5;187m SCCs                  : [38;5;106m0               [0m
+c  [38;5;187m Hyper unaries         : [38;5;106m0               [0m
+c  [38;5;187m Removed variables     : [38;5;106m0               [0m
+c  [38;5;187m Removed clauses       : [38;5;106m0               [0m
+c  [38;5;187mHyper binary resolves  : [38;5;106m0               [0m
+c  [38;5;187m Added binaries        : [38;5;106m0               [0m
+c  [38;5;187mHyper ternary resolves : [38;5;106m67767           [0m
+c  [38;5;187m Added binaries        : [38;5;106m0               [0m
+c  [38;5;187m Added ternaries       : [38;5;106m82              [0m
+c  [38;5;187m Subsumed ternaries    : [38;5;106m0               [0m
+c  [38;5;187mReduces                : [38;5;106m5               [0m
+c  [38;5;187mRestarts               : [38;5;106m53              [0m
+c  [38;5;187m Stable restarts       : [38;5;106m1               [0m
+c  [38;5;187m Stable modes          : [38;5;106m2               [0m
+c  [38;5;187m Unstable modes        : [38;5;106m2               [0m
+c  [38;5;187mRephases               : [38;5;106m4               [0m
+c  [38;5;187m Walk                  : [38;5;106m2               [0m
+c  [38;5;187mRecyclings             : [38;5;106m5               [0m
+c  [38;5;187m Soft                  : [38;5;106m0               [0m
+c  [38;5;187m Hard                  : [38;5;106m5               [0m
+c  [38;5;187mProbes calls           : [38;5;106m3               [0m
+c  [38;5;187m Rounds                : [38;5;106m0               [0m
+c  [38;5;187m Probed                : [38;5;106m0               [0m
+c  [38;5;187m Failed                : [38;5;106m0               [0m
+c  [38;5;187m Ticks                 : [38;5;106m354104          [0m
+c  [38;5;187mTransitive calls       : [38;5;106m3               [0m
+c  [38;5;187m Probed                : [38;5;106m3480            [0m
+c  [38;5;187m Failed                : [38;5;106m0               [0m
+c  [38;5;187m Transitives           : [38;5;106m0               [0m
+c  [38;5;187m Ticks                 : [38;5;106m7572            [0m
+c  [38;5;187mSubsume calls          : [38;5;106m0               [0m
+c  [38;5;187m Checks                : [38;5;106m0               [0m
+c  [38;5;187m Subsumed              : [38;5;106m0               [0m
+c  [38;5;187m Strengthened          : [38;5;106m0               [0m
+c  [38;5;187mSearch decisions       : [38;5;106m10078           [0m
+c  [38;5;187m Propagations          : [38;5;106m476136          [0m
+c  [38;5;187m Ticks                 : [38;5;106m2578614         [0m
+c  [38;5;187mMappings               : [38;5;106m0         [0m
+c  [38;5;187mMDM calls              : [38;5;106m3         [0m
+c  [38;5;187m Walks                 : [38;5;106m1         [0m
+c  [38;5;187m VMTF uses             : [38;5;106m2         [0m
+c  [38;5;187m VSIDS uses            : [38;5;106m0         [0m
+c  [38;5;187m All decisions         : [38;5;106m329             [0m
+c  [38;5;187m Assumed decisions     : [38;5;106m0               [0m
+c  [38;5;187m Last-made decisions   : [38;5;106m116       [0m
+c  [38;5;187mVivification checks    : [38;5;106m5772            [0m
+c  [38;5;187m Vivified              : [38;5;106m515             [0m
+c  [38;5;187mWalk calls             : [38;5;106m2               [0m
+c  [38;5;187m Checks                : [38;5;106m10694623        [0m
+c  [38;5;187m Minimum               : [38;5;106m0               [0m
+c  [38;5;187m Flipped               : [38;5;106m289628          [0m
+c  [38;5;187m Improved              : [38;5;106m2               [0m
+c 
+c  Cleaning up..done.
+c--------------------------------------------------------------------------------------------
